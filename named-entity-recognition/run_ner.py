@@ -323,7 +323,13 @@ def main():
                             logger.warning(
                                 "Maximum sequence length exceeded: No prediction for '%s'.", line.split()[0]
                             )
-            
+
+
+    # upload the model to the huggingface
+    # need to run the 'huggingface-cli login' first in the terminal
+    # can start by using the run.sh
+    model.push_to_hub("ner_test")
+    tokenizer.push_to_hub("ner_test")
 
     return results
 

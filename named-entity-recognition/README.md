@@ -6,8 +6,15 @@ Before training, please run `./preprocess.sh` to preprocess the datasets downloa
 ## Additional Requirements
 - seqeval : Used for NER evaluation (`pip install seqeval`)
 
+## upload the model to the huggingface
+ - need to run the (`huggingface-cli login`) first in the terminal.huggingface-cli login.
+ - remember to get the writable token in the huggingface.
+ - can start by using the run.sh(shown below)
+
 ## Training
 ```bash
+!huggingface-cli login
+
 export SAVE_DIR=./output
 export DATA_DIR=../datasets/NER
 
